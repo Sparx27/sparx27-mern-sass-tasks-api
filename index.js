@@ -14,6 +14,10 @@ api.use(cors())
 api.use(json())
 api.use(urlencoded({ extended: false }))
 
+api.get('/', (req, res) => {
+  res.send('Home')
+})
+
 api.use('/api/tasks', taskRouter)
 
 const PORT = process.env.MONGO_URI || 5005
