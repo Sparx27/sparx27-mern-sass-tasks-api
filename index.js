@@ -20,7 +20,7 @@ api.get('/', (req, res) => {
 
 api.use('/api/tasks', taskRouter)
 
-const PORT = process.env.MONGO_URI || 5005
+const PORT = process.env.PORT || 5005
 api.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`)
 })
